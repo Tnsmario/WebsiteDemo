@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #163d39;
+  padding: 10px 20px;
+  color: #fff;
+  min-width: 100vw;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+}
+li {
+  position: relative;
+  margin: 0 20px;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 0;
+  bottom: -5px;
+  border-radius: 6px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+li:hover::before {
+  width: 50%;
+}
+
+.left-links a,
+.right-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: RobotoLight;
+  font-size: 19px;
+}
+
+img {
+  max-height: 5rem;
+  background-size: contain;
+}
+
+/* BREAKPOINTS */
+@media (max-width: 768px) {
+}
+/* FONTS IMPORT */
+
+/*  
+    NOTOSERIF => BRAND & LOGO 
+    ROBOTO => HEADLINES
+    ROBOTO VARIABLE => PARAGRAPH
+ */
+@font-face {
+  font-family: NotoExtraLightItalic;
+  src: url(/fonts/NotoSerifDisplay_ExtraCondensed-ExtraLightItalic.ttf),
+    format("truetype");
+}
+@font-face {
+  font-family: NotoItalic;
+  src: url(/fonts/NotoSerifDisplay_ExtraCondensed-Italic.ttf),
+    format("truetype");
+}
+@font-face {
+  font-family: NotoLight;
+  src: url(/fonts/NotoSerifDisplay_ExtraCondensed-Light.ttf), format("truetype");
+}
+@font-face {
+  font-family: NotoLightItalic;
+  src: url(/fonts/NotoSerifDisplay_ExtraCondensed-LightItalic.ttf),
+    format("truetype");
+}
+@font-face {
+  font-family: NotoMediumItalic;
+  src: url(/fonts/NotoSerifDisplay_ExtraCondensed-MediumItalic.ttf),
+    format("truetype");
+}
+@font-face {
+  font-family: NotoRegular;
+  src: url(/fonts/NotoSerifDisplay_ExtraCondensed-Regular.ttf),
+    format("truetype");
+}
+@font-face {
+  font-family: RobotoLight;
+  src: url(/fonts/Roboto-Light.ttf), format("truetype");
+}
+@font-face {
+  font-family: RobotoThin;
+  src: url(/fonts/Roboto-Thin.ttf), format("truetype");
+}
