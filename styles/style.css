@@ -67,7 +67,12 @@ li:hover::before {
 
 /* ABOUT ME SECTION */
 #despreMine {
-  max-width: 100vw;
+  width: 100%;
+}
+.despreMineText {
+  text-align: center;
+  margin: 4rem 0 0 0;
+  letter-spacing: 0.2rem;
 }
 .aboutMeWrapper {
   margin: 3rem auto;
@@ -83,33 +88,38 @@ li:hover::before {
 }
 .right-text {
   background-color: #b0c1b8;
-  color: #fff;
+  color: #111;
   padding: 2rem;
   border-radius: 7px;
   width: 50%;
-  box-shadow: 0 2px 10px #807d7d;
+  box-shadow: 0 2px 1rem #807d7d;
 }
 .aboutMeText {
   font-size: 18px;
 }
-.left-img .headerImg {
+.headerImg {
   border-radius: 8px;
   max-width: 450px;
-  box-shadow: 0 2px 10px #807d7d;
+  box-shadow: 0 2px 1rem #807d7d;
 }
 
 /* BENEFITS SECTION */
 
+.beneficii-title {
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
 .beneficii {
-  width: 80%;
-  min-height: 100vh;
+  width: 100%;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5rem 0;
 }
 .beneficiiWraper {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,10 +127,37 @@ li:hover::before {
 }
 .card {
   margin: 2rem auto;
-  background-color: pink;
+  background-color: #b0c1b8;
+  padding: 2rem;
   width: 300px;
   height: 380px;
   border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 40px 1rem #807d7d;
+  animation: flying 4s infinite ease-in-out;
+}
+
+.cardTitle {
+  margin: auto;
+  text-transform: uppercase;
+}
+.cardParagraph {
+  margin: auto;
+}
+.fontIcon {
+  height: 35px;
+}
+.cardImgWrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #163d39;
+  border-radius: 8px;
 }
 
 /* FOOTER */
@@ -167,6 +204,20 @@ li:hover::before {
   border-radius: 7px;
 }
 
+/* KEY FRAMES */
+
+@keyframes flying {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1380px) {
   .right-text {
@@ -179,8 +230,12 @@ li:hover::before {
 
 @media (max-width: 780px) {
   .right-text {
-    max-width: 450px;
+    width: 100%;
   }
+  .headerImg {
+    width: 500px;
+  }
+
   .left-links,
   .right-links {
     display: none !important;
@@ -190,6 +245,9 @@ li:hover::before {
   }
 }
 @media (max-width: 425px) {
+  .headerImg {
+    width: 250px;
+  }
   .footer p {
     font-size: 16px;
   }
