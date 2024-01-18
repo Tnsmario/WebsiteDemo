@@ -1,0 +1,141 @@
+.etapeleProcesuluiWrapper {
+  min-height: 60vh;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.etapeleProcesuluiTitle {
+  color: #edebdf;
+  padding: 2rem 0;
+  letter-spacing: 0.2rem;
+  font-size: 2em;
+  text-align: center;
+  filter: drop-shadow(0 0 10px #edebdf) drop-shadow(0 0 20px #edebdf);
+}
+.etapeleProcesului {
+  background-color: #163d39;
+}
+.procesCard {
+  width: 350px;
+  height: 350px;
+  border-radius: 12px;
+  background-color: #b0c1b8;
+  position: relative;
+  box-shadow: 0 0 20px #edebdf;
+  animation: flying 4s infinite ease-in-out;
+}
+.pc1::after {
+  content: "1";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  top: -6%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #edebdf;
+  filter: drop-shadow(0 0 10px #edebdf) drop-shadow(0 0 20px #edebdf);
+}
+.pc2::after {
+  content: "2";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  top: -6%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #edebdf;
+  filter: drop-shadow(0 0 10px #edebdf) drop-shadow(0 0 20px #edebdf);
+}
+.pc3::after {
+  content: "3";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  top: -6%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #edebdf;
+  filter: drop-shadow(0 0 10px #edebdf) drop-shadow(0 0 20px #edebdf);
+}
+.pc4::after {
+  content: "4";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  top: -6%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #edebdf;
+  filter: drop-shadow(0 0 10px #edebdf) drop-shadow(0 0 20px #edebdf);
+}
+.pc5::after {
+  content: "5";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  top: -6%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #edebdf;
+  filter: drop-shadow(0 0 10px #edebdf) drop-shadow(0 0 20px #edebdf);
+}
+.procesCardTitle {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 0.5rem;
+}
+.procesDescription {
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .etapeleProcesuluiTitle {
+    padding: 4rem;
+  }
+}
+@keyframes flying {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}

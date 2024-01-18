@@ -3,6 +3,10 @@
     ROBOTO => HEADLINES
     ROBOTO VARIABLE => PARAGRAPH
  */
+:root {
+  --headline: RobotoLight;
+  --paragraph: RobotoThin;
+}
 
 * {
   padding: 0;
@@ -16,7 +20,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: RobotoLight;
+  font-family: var(--headline);
 }
 
 /* NAVBAR */
@@ -26,6 +30,7 @@ body {
   background-color: #163d39;
   padding: 10px 20px;
   color: #fff;
+  min-height: 8vh;
   max-width: 100vw;
 }
 
@@ -69,13 +74,18 @@ li:hover::before {
 #despreMine {
   width: 100%;
 }
-.despreMineText {
+.despreMineTitle {
+  color: #163d39;
+  font-size: 32px;
   text-align: center;
   margin: 4rem 0 0 0;
   letter-spacing: 0.2rem;
+  font-family: var(--headline);
+  filter: drop-shadow(0 0 10px #163d39) drop-shadow(0 0 20px #163d39)
+    drop-shadow(0 0 40px #163d39);
 }
 .aboutMeWrapper {
-  margin: 3rem auto;
+  margin: auto;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -83,33 +93,157 @@ li:hover::before {
   align-items: center;
   flex-wrap: wrap;
   gap: 6rem;
-  padding: 5rem 0;
-  border-radius: 12px;
+  padding: 5rem 0 2rem 0;
 }
 .right-text {
   background-color: #b0c1b8;
   color: #111;
   padding: 2rem;
-  border-radius: 7px;
+  border-radius: 12px;
   width: 50%;
   box-shadow: 0 2px 1rem #807d7d;
-}
-.aboutMeText {
   font-size: 18px;
 }
 .headerImg {
-  border-radius: 8px;
+  border-radius: 12px;
+  max-height: 450px;
   max-width: 450px;
   box-shadow: 0 2px 1rem #807d7d;
 }
 
-/* BENEFITS SECTION */
+/* CONTACT SECTION */
 
-.beneficii-title {
-  text-align: center;
-  letter-spacing: 0.2rem;
+.contactWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+}
+.cardContact {
+  max-width: 350px;
+  flex: 1 1 350px;
+  height: 150px;
+  background-color: #b0c1b8;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
 }
 
+.icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .cardContact {
+    max-width: 100%;
+  }
+}
+
+/* SERVICES SECTION  */
+.servicii {
+  width: 100%;
+  background-color: #163d39;
+}
+.serviciiTitle {
+  color: #edebdf;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.2rem;
+  font-family: var(--headline);
+  filter: drop-shadow(0 0 10px #edebdf) drop-shadow(0 0 20px #edebdf);
+}
+.serviciiWrapper {
+  padding: 4rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 7rem;
+  flex-wrap: wrap;
+}
+.serviciiCard {
+  background-color: #b0c1b8;
+  height: 400px;
+  width: 350px;
+  border-radius: 12px;
+  padding: 2rem;
+  animation: flying 4s infinite ease-in-out;
+  box-shadow: 0 0 30px #edebdf;
+}
+.serviciiCardTitle {
+  text-align: center;
+  margin: 1.7rem;
+}
+.serviciiCardImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 80px;
+  width: 80px;
+  border-radius: 8px;
+  background-color: #163d39;
+}
+.serviciiParagraph {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  font-size: 20px;
+}
+
+/* PARTNERS SECTION */
+
+.parteneriWrapper {
+  min-height: 400px;
+}
+.parteneriTitle {
+  font-size: 2em;
+  text-align: center;
+  padding: 2rem 0;
+  letter-spacing: 0.2rem;
+  font-family: var(--headline);
+  margin-top: 3rem;
+  color: #163d39;
+  filter: drop-shadow(0 0 10px #163d39) drop-shadow(0 0 20px #163d39)
+    drop-shadow(0 0 40px #163d39);
+}
+.parteneriImgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  column-gap: 15rem;
+  row-gap: 3rem;
+}
+
+.partener {
+  height: 10rem;
+}
+.sponsorClickable {
+  text-decoration: none;
+}
+
+/* BENEFITS SECTION */
+
+.beneficiiTitle {
+  font-size: 2em;
+  color: #163d39;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  font-family: var(--headline);
+  padding: 5rem 0 0 0;
+  filter: drop-shadow(0 0 10px #163d39) drop-shadow(0 0 20px #163d39)
+    drop-shadow(0 0 40px #163d39);
+}
 .beneficii {
   width: 100%;
   margin: auto;
@@ -149,6 +283,7 @@ li:hover::before {
 }
 .fontIcon {
   height: 35px;
+  color: #fff;
 }
 .cardImgWrapper {
   width: 80px;
@@ -233,7 +368,7 @@ li:hover::before {
     width: 100%;
   }
   .headerImg {
-    width: 500px;
+    min-width: 300px;
   }
 
   .left-links,
